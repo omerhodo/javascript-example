@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>My first three.js app</title>
+		<style>
+			body { margin: 0; }
+            canvas { width: 50%; height: 50% }
+		</style>
+	</head>
+	<body>
+		<script src="js/three.js"></script>
+		<script>
+			const scene = new THREE.Scene(); //Sahne
+			const scene2 = new THREE.Scene(); 
+			const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 ); //Kamera
+			const renderer = new THREE.WebGLRenderer(); //Oluşturucu
+
+			renderer.setSize( window.innerWidth, window.innerHeight ); //Sahne boyu
+			document.body.appendChild( renderer.domElement );
+
+			const geometry = new THREE.BoxGeometry(); //Şeklin yapısı
+			const material = new THREE.MeshBasicMaterial( { color: 0x110000 } ); //Doku
+			const cube = new THREE.Mesh( geometry, material ); //THREE.Mesh yapı ve dokuyu üst üste bindirir
+			scene.add( cube );
+
+			const geometry2 = new THREE.BoxGeometry(); //Şeklin yapısı
+			const material2 = new THREE.MeshBasicMaterial( { color: 0x666600 } ); //Doku
+			const cube2 = new THREE.Mesh( geometry2, material2 ); //THREE.Mesh yapı ve dokuyu üst üste bindirir
+			scene2.add( cube2 );
+
+			const geometry3 = new THREE.BoxGeometry(); //Şeklin yapısı
+			const material3 = new THREE.MeshBasicMaterial( { color: 0x006655 } ); //Doku
+			const cube3 = new THREE.Mesh( geometry3, material3 ); //THREE.Mesh yapı ve dokuyu üst üste bindirir
+			scene2.add( cube3 );
+
+			camera.position.z = 3;
+
+			const animate = function () {
+				requestAnimationFrame( animate );
+
+				cube.rotation.x += 0.01;
+				cube.rotation.y += 0.01;
+
+				renderer.render( scene2, camera );
+			};
+			const animate2 = function () {
+				requestAnimationFrame( animate2 );
+
+				cube.rotation.x += 0.1;
+				cube.rotation.y += 0.1;
+
+				renderer.render( scene2, camera );
+			};
+
+			animate();
+			animate2();
+
+		</script>
+	</body>
+</html>
