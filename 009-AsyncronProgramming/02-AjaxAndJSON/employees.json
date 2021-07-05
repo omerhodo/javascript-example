@@ -1,0 +1,22 @@
+[
+    {
+        "name" : "Ömer Hodo",
+        "department" : "Bilişim",
+        "salary" : 4000
+    },
+    {
+        "name" : "mc",
+        "department" : "meb",
+        "salary" : 5000
+    },
+    {
+        "name" : "yc",
+        "department" : "grafik",
+        "salary" : 6000
+    },
+    {
+        "name" : "hd",
+        "department" : "yök",
+        "salary" : 7000
+    }
+]
