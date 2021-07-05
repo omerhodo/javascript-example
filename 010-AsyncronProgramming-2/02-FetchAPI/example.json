@@ -1,0 +1,22 @@
+[
+    {
+        "name" : "hodo",
+        "age" : 27,
+        "salary" : 4000
+    },
+    {
+        "name" : "mc",
+        "age" : 28,
+        "salary" : 4000
+    },
+    {
+        "name" : "hd",
+        "age" : 29,
+        "salary" : 4000
+    },
+    {
+        "name" : "yc",
+        "age" : 30,
+        "salary" : 4000
+    }
+]
